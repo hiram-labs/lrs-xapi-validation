@@ -1,0 +1,52 @@
+{
+  "name": "lrs-xapi-validation",
+  "version": "0.0.1",
+  "description": "Validation library for the xAPI.",
+  "author": "hiram-labs",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hiram-labs/lrs-xapi-validation.git"
+  },
+  "files": [
+    "dist",
+    "package-lock.json"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha dist/**/*.test.js --exit",
+    "cover": "nyc --lines 100 --check-coverage npm run test",
+    "clean": "rimraf dist",
+    "lint": "eslint src/**/*.ts",
+    "fmt": "prettier 'src/**/*.*' --write",
+    "prepare": "npm run build"
+  },
+  "engines": {
+    "node": ">16.0.0",
+    "npm": ">8.0.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.202",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.11.10",
+    "@types/source-map-support": "^0.5.10",
+    "@typescript-eslint/eslint-plugin": "^6.20.0",
+    "@typescript-eslint/parser": "^6.20.0",
+    "assert": "^2.1.0",
+    "eslint": "^8.56.0",
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "prettier": "^3.2.4",
+    "rimraf": "^5.0.5",
+    "source-map-support": "^0.5.21",
+    "typescript": "^5.3.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
